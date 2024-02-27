@@ -1,0 +1,20 @@
+ls
+export AWS_ACCESS_KEY_ID="ASIA4M7WMJLRJVGH3BEV"
+export AWS_SECRET_ACCESS_KEY="J3/eDp+sKX8H9rrEAAMnPlRQWmFCYo1tUXyYkR1e"
+export AWS_SESSION_TOKEN="IQoJb3JpZ2luX2VjEOr//////////wEaDGV1LWNlbnRyYWwtMSJGMEQCIHwmVhvhr3+9lLuSkLnyIm0nGDEgSktvrwa8L8N3SV7DAiBsk5O3rkDyWV4OHUUz+PH0EDkSNxEHPINgUrVirfB2NyqpAwjT//////////8BEAEaDDg1MjUzMDg0MjMzOCIM9rUEV4RyTQyjZRbxKv0CUzSSdcomMEAOd3eJ+kwDiziqISo/Gq5rtVJHXFSp0tBxwlqIUrm7Y/dNpAfXOdCDE+6F1x4vwcAxniIvAMwSyT8QAvolyKG1/ooaOS14yPVZjusZv9gJ1ymWVxBKS1sRcWZfklBO/Tqay3mT22p0Rl8N6iWq1l8pos1FXU6WKTqQEyBWNeOlKo3TAB9VMi/PHjMl0bR7hav0oQkSpzW1MWGp+z/jHedG3sgpbSSVT+N3BlhsddkoLE5icL8B3BZNqGrdFzOf+88Fg3X3sTWd4GBn9Bc8TMUvtZtS/iJAMCDTIGT++zjdwwxLWo7/2k6jQ5K+bPM7CavKAOjkScziJihqnP1L8sQI1tfOZFHFoGjeZ5MA61VAuzAA89MTSxMbeAMlweo9K3uxRzf9y47ZaClSG2QaWZrB5tdC+4blwuUcBgicYg7s7N4WtOb2lz4cqAjn+bk92QDR7YPO7qt0toOS61M54no/bQ8aRf7WoaBvx9Fc2XS0JfWE9NYAMJzd9q4GOqcBbiYA3G/QjZ0lBIuoXT5YdhzpAzwYlVBLEmXWWmSWKuTm0IZjOegevxrmogF9d3OIBOheF3Ilrw6SQbR1mIuHTAxvKKih175h81LZvXjMCqLB66XCaD3Nv1Pc6CODJ0lsM1dgYw87OOsh4G3PVTHF5apuwgoejGhVhddlFrVGABjM0uZL+QH47oZmu8QHHJD9q3Ks3qi9qO1Xi3trAYGuqKS8zNsZgFs="
+exit
+ls
+exit
+cd /var/jenkins_home/.ssh/
+cd /var/jenkins_home/.ssh
+cd var/jenkins_home/.ssh
+cd /var
+cd jenkins_home/
+ls
+ls -l
+mkdir .ssh
+cd .ssh/
+vi todokey.pem
+cat todokey.pem 
+chmod 600 todokey.pem 
+exit

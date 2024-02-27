@@ -1,0 +1,19 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2024-02-26 22:40:07.807 UTC</timestamp>
+  <md5sum>8ce3743d843f18525920a195972cb35f</md5sum>
+  <fileName>Credential id=0620a4aa-beb6-4fb3-a6c6-410b74a2b3cc name=arberatD/******</fileName>
+  <usages>
+    <entry>
+      <string>python</string>
+      <ranges>6</ranges>
+    </entry>
+  </usages>
+  <facets>
+    <com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet plugin="credentials@1319.v7eb_51b_3a_c97b_">
+      <timestamp>1709029251831</timestamp>
+      <itemFullName>python</itemFullName>
+      <timestamp0>1709029249442</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet>
+  </facets>
+</fingerprint>
