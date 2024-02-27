@@ -21,14 +21,14 @@ pipeline {
       stage('Checkout project'){
         steps {
           echo 'downloading git directory..'
-	  git 'https://github.com/arberatD/PythonSecurityPipeline.git'
+	  git 'https://github.com/DevRico003/secDevLabs'
         }
       }      
       stage('git secret check'){
         steps{
 	  script{
 		echo 'running trufflehog to check project history for secrets'
-		sh 'trufflehog --regex --entropy=False --max_depth=3 https://github.com/arberatD/secDevLabs'
+		sh 'trufflehog --regex --entropy=False --max_depth=3 https://github.com/DevRico003/secDevLabs'
 	  }
         }
       }
@@ -100,29 +100,21 @@ pipeline {
           }
       }
       stage('DAST') {
-          steps {
-		script{				
-			//Test the web application from its frontend
-			/*
-			def exists = fileExists '/var/jenkins_home/nikto-master/program/nikto.pl'
-			if(exists){
-				echo 'nikto already exists'
-			}else{
-			      sh """
-				wget https://github.com/sullo/nikto/archive/master.zip
-				unzip master.zip -d ~/ || true
-				rm master.zip
-			      """
-			}
-			*/
-			def seleniumIp = env.SeleniumPrivateIp
-			if("${testenv}" != "null"){
-				sh "python ~/authDAST.py $seleniumIp ${testenv} $WORKSPACE/$BUILD_TAG/DAST_results.html"
-				//sh "perl /var/jenkins_home/nikto-master/program/nikto.pl -h http://${testenv}:10007/login"
-			}  			
-		}
-	   }
-      }
+    steps {
+        script {                
+            // Stellen Sie sicher, dass die Variable 'seleniumIp' korrekt gesetzt ist
+            def seleniumIp = 'http://3.71.166.230:4444/wd/hub'
+            // Verwenden Sie 'testenv' für die Ziel-IP oder URL
+            def targetUrl = "http://${testenv}:10007"
+            // Definieren Sie den Pfad, an dem der Bericht gespeichert werden soll
+            def reportPath = "$WORKSPACE/$BUILD_TAG/DAST_results.html"
+
+            // Übergeben Sie die notwendigen Argumente an das Python-Skript
+            sh "python3 ~/authDAST.py ${seleniumIp} ${targetUrl} ${reportPath}"
+        }
+    }
+}
+
       stage('System security audit') {
           steps {
               echo 'Run lynis audit on host and fetch result'
